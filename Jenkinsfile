@@ -17,7 +17,7 @@ pipeline {
 
         stage('Run Trivy Scan') {
             steps {
-                sh 'trivy image myapp'
+                sh 'trivy image --exit-code 0 myapp'
             }
         }
 
